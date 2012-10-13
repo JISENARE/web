@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>テストページ</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"><!-- jquery UI のcss-->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("jquery", "1.8");
+google.load("jqueryui", "1.8");
+$('#dialog').dialog();
+</script>
+</head>
+<body>
+<header>
+ここがヘッダー
+</header>
+<nav>
+<ul>
+<li>ここがナビゲーション</li>
+<li>ここがナビゲーション</li>
+</ul>
+</nav>
+<section>
+<h1>第一セクション</h1>
+<p>テキスト</p>
+</section>
+<div id="dialog" title="ダイアログタイトル">
+	<p>
+		jQueryUIを使用してダイアログを表示してみました。javascriptで「dialog」を指定するだけです。<br>
+		すごいですね。簡単ですね。
+	</p>
+</div>
+</body>
+</html>
