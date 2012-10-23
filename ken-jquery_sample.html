@@ -11,8 +11,8 @@
 </script>
 <script type="text/javascript">
 $(function() {
-	$("li").css("color","red");
 	$( "#dialog" ).dialog();
+    $('#accordion').accordion({ header: 'h3' });
 });
 </script>
 </head>
@@ -36,5 +36,20 @@ $(function() {
 		すごいですね。簡単ですね。
 	</p>
 </div>
+<div id="accordion" title="アコーディオン">
+<h3><a href="#">Section 1</a></h3>
+	<div>
+	<p>
+	こっちはダイアログ表示しません。
+	</p>
+	</div>
+<h3><a href="#">Section 2</a></h3>
+	<div>
+	<p>
+	こっちはダイアログ表示しません。
+	</p>
+	</div>	
+</div>
+
 </body>
 </html>
