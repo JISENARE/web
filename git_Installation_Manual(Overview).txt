@@ -1,0 +1,37 @@
+1)msysgitの最新版を入手する。
+ダウンロード元：
+http://code.google.com/p/msysgit/downloads/list
+
+2)msysgitをインストールする。
+インストール時のオプションを初期値から変更する必要はない。
+
+3)SSH Keyを作成する。
+参照：ssh key生成方法
+https://help.github.com/articles/generating-ssh-keys
+※Step4にてclipコマンドが使えない場合、id_rsa.pubをテキストエディタで開き文字列を全選択しコピーする。
+
+4)Git hubにて自分のアカウントに手順3でコピーしたSSH keyを追加する。
+
+5)Git Bashを起動しconfig設定を変更する。
+コマンド：git config --global user.email test@example.com
+
+6)使用するリポジトリをgit hubからローカルへコピーする。
+コマンド：git clone git@github.com:test/test.git
+
+7)ファイル編集後、変更をローカルリポジトリ内でコミットする。
+コマンド①（新規ファイル追加時）：
+git add <ファイル名>
+git commit
+
+コマンド②（ファイル修正時）：
+git commit -a
+
+8)コミット用のコメントを入力する。
+参照：viの使い方
+http://turbo.mech.iwate-u.ac.jp/Fel/unix/vi.html
+
+9)コミットした内容をリモートリポジトリへ送信する。
+コマンド：git push
+
+参照：コマンド一覧
+http://sourceforge.jp/magazine/09/03/16/0831212/2
