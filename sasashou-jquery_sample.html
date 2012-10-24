@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("jquery", "1");
+	google.load("jqueryui", "1");
+</script>
+
+<title>jquery test</title>
+
+<style type="text/css">
+<!-- 
+.drag_item{width:150px;height:150px;border:1px solid #f96;background:#ffe;}
+-->
+</style>
+
+<script>
+$(function() {
+$(".drag_item").draggable();// 垂直水平位置を揃えたい画像を指定
+});
+</script>
+
+</head>
+<body>
+
+<p class="drag_item">
+どらっぐできるん
+</p>
+<p class="drag_item">
+どらっぐできるん
+</p>
+
+
+<a href="https://developers.google.com/speed/libraries/devguide?hl=ja">Google Hosted Libraries - Developer's Guide</a><br/>
+<a href="http://scriptsrc.net/">http://scriptsrc.net/</a><br/>
+<a href="http://www.webcreatorbox.com/tech/jquery-tips20/">少しのコードで実装可能な20のjQuery小技集</a>
+
+
+<pre title="">
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.google.com/jsapi&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	google.load("jquery", "1");
+	google.load("jqueryui", "1");
+&lt;/script&gt;
+
+は
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;!-- jquery　本体--&gt;
+&lt;script type=&quot;text/javascript&quot;  src=&quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js&quot;&gt;&lt;/script&gt;&lt;!-- jquery-UI　本体--&gt;
+
+と同じ？
+</pre>
+
+
+
+</body>
+</html>
