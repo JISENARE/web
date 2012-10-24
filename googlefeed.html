@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Google Feed practice</title>
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+        google.load("feeds", "1");
+        
+        function initialize() {
+            var feed = new google.feeds.Feed('http://www.treehugger.com/feeds/entries/');
+            feed.setNumEntries(4);
+            feed.includeHistoricalEntries();
+            feed.load(function(result) {
+                if (!result.error) {
+                    // console.log(result);
+                    var container = document.getElementById('treehugger');
+                    for (var i = 0; i < result.feed.entries.length; i++) {
+                        var entry = result.feed.entries[i];
+
+                        var link = document.createElement("a");
+                        link.href = entry.link;
+                        link.appendChild(document.createTextNode(entry.title));
+                        
+                        var li = document.createElement("li");
+                        li.appendChild(link);
+
+                        container.appendChild(li);
+
+						var img = document.createElement("div");
+						img.innerHTML = entry.content;
+						container.appendChild(img);
+                    }
+                }
+            });
+
+			var feed = new google.feeds.Feed('http://www.buzzfeed.com/tech.xml');
+            feed.setNumEntries(4);
+            feed.includeHistoricalEntries();
+            feed.load(function(result) {
+                if (!result.error) {
+                    // console.log(result);
+                    var container = document.getElementById('buzzfeed');
+                    for (var i = 0; i < result.feed.entries.length; i++) {
+                        var entry = result.feed.entries[i];
+ 
+                        var link = document.createElement("a");
+                        link.href = entry.link;
+                        link.appendChild(document.createTextNode(entry.title));
+                        
+                        var li = document.createElement("li");
+                        li.appendChild(link);
+                        
+                        container.appendChild(li);
+                    	
+						var img = document.createElement("div");
+						img.innerHTML = entry.content;
+						container.appendChild(img);
+					}
+                }
+            });
+        }
+        
+        google.setOnLoadCallback(initialize);
+    </script>
+</head>
+<body>
+    <ul id="treehugger">treehugger</ul>
+    <ul id="buzzfeed">buzzfeed</ul>
+</body>
+</html>
